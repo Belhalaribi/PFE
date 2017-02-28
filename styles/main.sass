@@ -1,18 +1,57 @@
 
-body
-  background: salmon
 
-.root
-  display: flex
-  flex-wrap: wrap
 
-.buttonz
-  color: white
-  background: cornflowerblue
-  border-radius: 10px
-  height: 40px
-  width: 60px
+$header-height: 75px
+$footer-height: 75px
+
+$f: $footer-height + $header-height
+
+html, body
+  padding: 0px
+  margin: 0px
+  font-family: sans-serif
+
+.header, .footer
+  background: #02315a
+  width: 100%
+
+.footer
   display: flex
+  height: $footer-height
+  color: transparentize(white, .1)
   justify-content: center
   align-items: center
-  margin: 10px
+  font-size: 18px
+
+.header
+  height: $header-height
+  position: fixed
+  top: 0px
+  display: flex
+  align-items: center
+  .description
+    .first-line, .second-line
+      color: transparentize(white, .1)
+      font-size: 12px
+
+  .logo-wrapper
+    margin-left: 12.5px
+    margin-right: 12.5px
+    .logo-placeholder
+      position: relative
+      height: 50px
+      width: 50px
+      background: white
+      .logo-text
+        position: absolute
+        bottom: 0px
+        right: 7px
+        font-weight: bold
+
+
+
+.content
+  margin-top: $header-height
+  background: lighten(#02315a, 50%)
+  width: 100%
+  height: calc(100vh - 150px)
