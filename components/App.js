@@ -3,7 +3,9 @@ import { render } from 'react-dom';
 import s from '../styles/main.sass';
 
 import Header from './Header.js';
+import Content from './Content.js';
 import Footer from './Footer.js';
+
 
 
 class App extends Component {
@@ -12,9 +14,7 @@ class App extends Component {
     return(
       <div class="root">
         <Header/>
-        <div class="content">
-
-        </div>
+        <Content/>
         <Footer/>
       </div>
     )
