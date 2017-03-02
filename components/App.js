@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import { render } from 'react-dom';
 import s from '../styles/main.sass';
 
-import Header from './Header.js';
-import Content from './Content.js';
-import Footer from './Footer.js';
+import { Router, Route, hashHistory } from 'react-router';
 
+import Home from '../routes/Home.js';
+import Login from '../routes/Login.js';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-
+injectTapEventPlugin()
 class App extends Component {
 
   render() {
     return(
-      <div class="root">
-        <Header/>
-        <Content/>
-        <Footer/>
-      </div>
+      <MuiThemeProvider >
+      <Router history={hashHistory}>
+        <Route path="/" component={Home} />
+        <Route path="/login" component={Login} />
+      </Router>
+      </MuiThemeProvider>
     )
   }
 }
