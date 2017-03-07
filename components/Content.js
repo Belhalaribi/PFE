@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
 
+import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
+
+
 export default class Content extends Component
 {
   render(){
     return(
       <div class="content">
         <div class="login">
-          <input
-            type="text"
-            class="username"
-            placeholder="Your ID" />
-          <input
-            class="password"
-            type="password"
-            placeholder="Your Password" />
+
+          <TextField
+            hintText="ID"
+            floatingLabelText=""
+            floatingLabelFixed={true}
+            /><br />
+            <TextField
+              hintText="Password Field"
+              floatingLabelText="Password"
+              type="password"
+             /><br />
+          <div>
+            <FlatButton
+              class="Connect" label="Connect"  primary={true}
+              backgroundColor="white"
+              hoverColor="red"    />
+            </div>
           <a href="" class="passchange">
              Forgot Your Password ?
           </a>
+
           <a href="" class="Help"> ? </a>
         </div>
 
