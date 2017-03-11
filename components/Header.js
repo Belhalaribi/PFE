@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 
+import logo from "../assets/biat.png";
+import AppBar from 'material-ui/AppBar';
+
+
+let style = {
+  position: "relative",
+  top: 0
+}
+
 export default class Header extends Component
 {
   render(){
     return(
-      <div class="header">
-        <div class="logo-wrapper">
-          <div class="logo-placeholder">
-            <span class="logo-text">
-             BIAT
-            </span>
+      <AppBar
+        style={style}
+        iconElementLeft={
+          <div class="biat-logo">
+            <img src={logo} />
           </div>
-        </div>
-        <div class="description">
-            <div class="first-line">
-              BIATNET mobile
-            </div>
-            <div class="second-line">
-              Your hyper bank mobile
-            </div>
-        </div>
-      </div>
+        }
+        iconElementRight={<div> Deg </div>}
+        zDepth={2}
+      />
     )
   }
 }

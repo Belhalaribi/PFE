@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
 
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import Visibility from 'material-ui/svg-icons/action/visibility';
+import IconButton from 'material-ui/IconButton';
 
 
 export default class Content extends Component
 {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      pwdVisible: false
+    }
+  }
+
+  togglePwd(){
+    this.setState({
+      pwdVisible: !this.state.pwdVisible
+    })
+  }
+
   render(){
     return(
       <div class="content">
@@ -13,25 +29,30 @@ export default class Content extends Component
 
           <TextField
             hintText="ID"
-            floatingLabelText=""
-            floatingLabelFixed={true}
+            floatingLabelText="ID"
             /><br />
             <TextField
               hintText="Password Field"
               floatingLabelText="Password"
-              type="password"
-             /><br />
+              type={
+                this.state.pwdVisible ?
+                "text" :
+                "password"}
+             />
+             <IconButton onTouchTap={this.togglePwd.bind(this)}>
+               <Visibility />
+             </IconButton>
           <div>
-            <FlatButton
-              class="Connect" label="Connect"  primary={true}
+            <RaisedButton
+              class="Connect" label="Connect"
+              primary={true}
               backgroundColor="white"
-              hoverColor="red"    />
+              />
             </div>
-          <a href="" class="passchange">
+          <a href="#/login" class="passchange">
              Forgot Your Password ?
           </a>
 
-          <a href="" class="Help"> ? </a>
         </div>
 
       </div>

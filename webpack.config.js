@@ -19,7 +19,8 @@ module.exports = {
       {
         test: /\.sass$/,
         loaders: ['style', 'css', 'sass?indentedSyntax']
-      }
+      },
+      { test: /\.png$/, loader: "url-loader?mimetype=image/png" }
     ]
   },
   output: {
