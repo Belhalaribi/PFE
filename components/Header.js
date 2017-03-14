@@ -20,7 +20,7 @@ export default class Header extends Component
             <img src={logo} />
           </div>
         }
-        iconElementRight={<div> Deg </div>}
+        iconElementRight={<div> </div>}
         zDepth={2}
       />
     )

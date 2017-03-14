@@ -26,12 +26,11 @@ export default class SwipeMenu extends Component
       <Swipeable class="swipe-menu"
         onSwipedRight={this.swipe}>
         <Drawer
-          width={200}
+          width={150}
           docked={false}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
           >
-          sfsdf
         </Drawer>
       </Swipeable>
     )
