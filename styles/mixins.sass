@@ -4,11 +4,17 @@
   box-sizing: border-box
 
 
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+
 %clearfix
   *zoom: 1
   &:before,
   &:after
     content: " "
-    display: table      
+    display: table
   &:after
     clear: both
