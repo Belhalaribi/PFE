@@ -7,6 +7,8 @@ import { Router, Route, hashHistory } from 'react-router';
 
 import Home from '../routes/Home.js';
 import Login from '../routes/Login.js';
+import Test from '../routes/Test.js';
+
 import Profile from '../routes/Profile.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Theme from '../themes/CustomTheme.js';
@@ -20,6 +22,7 @@ class App extends Component {
       <Router history={hashHistory}>
         <Route path="/" component={Home} />
         <Route path="/login" component={Login} />
+        <Route path="/tchemou" component={Test} />
         <Route path="/Profile" component={Profile} />
       </Router>
     </Theme>

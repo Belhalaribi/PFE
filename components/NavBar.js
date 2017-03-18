@@ -13,9 +13,9 @@ export default class NavBar extends Component
       <div class="NavBar">
         <MenuItem class="LangMenuItem"
           primaryText="Log In"
-          leftIcon={<RemoveRedEye />}>  
+          leftIcon={<RemoveRedEye />}>
           </MenuItem>
-      </div >
+      </div>
     )
   }
 }

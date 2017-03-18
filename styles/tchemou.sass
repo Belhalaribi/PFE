@@ -1,0 +1,45 @@
+@import "./mixins.sass"
+
+.login-section
+  background: lighten(gray, 40%)
+  //padding-top tzid fel 5ochn mel fou9
+  padding-top: 20px
+  .login-form, .login-controls
+    @include flex-center
+    .id, .pwd
+      margin-bottom: 5px
+  .login-form
+    //transition bech ta3mel animation
+    transition: all .6s ease-in-out
+    height: 95px
+    margin-bottom: 10px
+    //overflow: hidden bech t5abbi elli 5arej 3al div
+    overflow: hidden
+    .login-submit
+      width: 100%
+      @include flex-center
+    &.hidden
+      height: 0px
+      margin: 0
+  .login-toggle
+    margin-top: -2px
+    width: 100%
+    padding: 2px 0
+    font-size: .8em
+    background: gray
+    //cursor: pointer trodlek el curseur ta3 esouris index finger
+    cursor: pointer
+    @include flex-center
+    color: white
+    //border-radius tdawer el 7arf ta3 e div
+    border-radius: 10px
+  .login-button
+    margin-top: 10px
+    background: cornflowerblue
+    padding: 10px 20px
+    border-radius: 10px
+    color: white
+    cursor: pointer
+    width: 80px
+    &.disabled
+      background: grey
