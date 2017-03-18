@@ -39,7 +39,7 @@ export default class Content extends Component
                 "text" :
                 "password"}
              />
-             <IconButton onTouchTap={this.togglePwd.bind(this)}>
+             <IconButton classs="eye-button" onTouchTap={this.togglePwd.bind(this)}>
                <Visibility />
              </IconButton>
           <div>

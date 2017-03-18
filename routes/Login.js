@@ -13,16 +13,16 @@ export default class Login extends Component
   render(){
     return(
       <Root>
-        {/* <Header />
+         <Header />
         <SwipeMenu />
         <Content />
-        <Footer /> */}
-        <div class="container">
+        <Footer />
+        {/*<div class="container">
           <div class="row">
             <div class="cl-2 cl-s-6 b"></div>
             <div class="cl-10 cl-s-6 a"></div>
           </div>
-        </div>
+        </div>  */}
       </Root>
     )
   }
