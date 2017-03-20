@@ -7,7 +7,7 @@ export default class Test extends Component
   render(){
     return(
       <div>
-        jkjl
+        location
         <DirectionsExample />
       </div>
     )

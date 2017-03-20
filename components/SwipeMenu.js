@@ -30,8 +30,13 @@ export default class SwipeMenu extends Component
           docked={false}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
+          children="ill"
+          children="bill"
+
+
           >
         </Drawer>
+
       </Swipeable>
     )
   }

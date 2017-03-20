@@ -41,12 +41,13 @@ export default class Home extends Component
                   leftIcon={<RemoveRedEye />}
                 />
                 </a>
+                <a href="#/tchemou">
             <MenuItem
               class="LangMenuItem"
               primaryText="Location"
               leftIcon={<ContentLink />}
-
               />
+                </a>
             <MenuItem
                class="LangMenuItem"
                primaryText="Ads"
